@@ -4,13 +4,11 @@ import type { Metadata } from 'next'
 import { Fira_Code } from 'next/font/google'
 
 import Providers from '@/app/providers'
-import { Footer } from '@/components/footer'
-import { Header } from '@/components/header'
 
 const firaCode = Fira_Code({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Johnny Silva',
+  title: 'Johnny Silva - Johnny Dev',
   description: 'Johnny Dev',
 }
 
@@ -22,11 +20,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={firaCode.className}>
-        <Providers>
-          <Header />
-          <main className="h-full min-h-[calc(100vh_-_466px)]">{children}</main>
-          <Footer />
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

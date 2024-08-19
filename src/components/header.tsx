@@ -54,11 +54,11 @@ export function Header() {
     <header className="my-10">
       <div className="container flex items-center justify-between">
         <div className="max-w-2xl">
-          <h1 className="text-3xl font-medium">
+          <h1 className="text-4xl font-medium">
             Johnny Silva{' '}
-            <code className="text-primary text-lg font-bold">&lt;JS/&gt;</code>
+            <code className="text-lg font-bold text-primary">&lt;JS/&gt;</code>
           </h1>
-          <span className="text-primary text-lg font-medium">Johnny Dev</span>
+          <span className="text-lg font-medium text-primary">Johnny Dev</span>
         </div>
         <ThemeToggle />
       </div>
@@ -67,9 +67,9 @@ export function Header() {
           <p className="mt-4">
             Olá, meu nome é Johnny Henrique da Silva (Johnny Dev), atuo como
             desenvolvedor{' '}
-            <span className="text-primary font-semibold"> FullStack</span>, sou
+            <span className="font-semibold text-primary"> FullStack</span>, sou
             apaixonado por{' '}
-            <span className="text-primary font-semibold">código</span>,
+            <span className="font-semibold text-primary">código</span>,
             desenvolver é minha praia.
           </p>
 
@@ -79,7 +79,7 @@ export function Header() {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <a href={social.url} target="_blank">
-                      <social.icon className="hover:text-primary h-8 w-8" />
+                      <social.icon className="h-8 w-8 hover:text-primary" />
                     </a>
                   </TooltipTrigger>
                   <TooltipContent>Ir para {social.name}</TooltipContent>
@@ -93,7 +93,7 @@ export function Header() {
                 initialMessage="Clique para copiar o usuário do Discord"
                 message="Usuário copiado para sua área de transferência"
               >
-                <FaDiscord className="hover:text-primary h-8 w-8" />
+                <FaDiscord className="h-8 w-8 hover:text-primary" />
               </CopyToClipboard>
             </li>
 
@@ -103,7 +103,7 @@ export function Header() {
                 initialMessage="Clique para copiar o e-mail"
                 message="E-mail copiado para sua área de transferência"
               >
-                <FiMail className="hover:text-primary h-8 w-8" />
+                <FiMail className="h-8 w-8 hover:text-primary" />
               </CopyToClipboard>
             </li>
           </ul>
