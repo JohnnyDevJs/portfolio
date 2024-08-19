@@ -54,7 +54,7 @@ export function Header() {
     <header className="my-10">
       <div className="container flex items-center justify-between">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-medium max-sm:text-2xl">
+          <h1 className="text-4xl font-semibold max-sm:text-2xl">
             Johnny Silva{' '}
             <code className="text-lg font-bold text-primary">&lt;JS/&gt;</code>
           </h1>
