@@ -3,8 +3,9 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Fira_Code } from 'next/font/google'
 
-import { Footer } from '@/app/components/footer'
-import { Header } from '@/app/components/Header'
+import Providers from '@/app/providers'
+import { Footer } from '@/components/footer'
+import { Header } from '@/components/header'
 
 const firaCode = Fira_Code({ subsets: ['latin'] })
 
@@ -21,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={firaCode.className}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <Providers>
+          <Header />
+          <main className="h-full min-h-[calc(100vh_-_466px)]">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   )
