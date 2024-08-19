@@ -54,7 +54,7 @@ export function Header() {
     <header className="my-10">
       <div className="container flex items-center justify-between">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-medium">
+          <h1 className="text-4xl font-medium max-sm:text-2xl">
             Johnny Silva{' '}
             <code className="text-lg font-bold text-primary">&lt;JS/&gt;</code>
           </h1>
@@ -73,7 +73,15 @@ export function Header() {
             desenvolver é minha praia.
           </p>
 
-          <ul className="mt-8 flex items-center gap-2">
+          <Image
+            className="mx-auto mt-4 h-full w-full rounded-full sm:hidden"
+            src={avatar}
+            width={250}
+            height={250}
+            alt="Johnny Henrique da Silva"
+          />
+
+          <ul className="mt-8 flex flex-wrap items-center gap-2">
             {socials.map((social, index) => (
               <li key={index}>
                 <Tooltip>
@@ -110,7 +118,7 @@ export function Header() {
         </div>
 
         <Image
-          className="rounded-full"
+          className="rounded-full max-sm:hidden"
           src={avatar}
           width={250}
           height={250}
