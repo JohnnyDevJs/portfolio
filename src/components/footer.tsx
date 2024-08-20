@@ -8,7 +8,7 @@ import {
 
 export function Footer() {
   return (
-    <footer className="my-4 flex flex-col items-center text-center">
+    <footer className="flex flex-col items-center bg-muted py-8 text-center">
       <div className="container space-y-2 max-sm:space-y-4">
         <p className="text-center text-sm">
           © Copyright 2024 - Johnny Silva (Johnny Dev){' '}

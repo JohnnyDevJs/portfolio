@@ -25,7 +25,7 @@ export function Skills() {
   ]
 
   return (
-    <section id="skills" className="mt-4">
+    <section>
       <div className="container">
         <Card>
           <CardHeader>

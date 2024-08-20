@@ -67,10 +67,14 @@ export function Header() {
           <p className="mt-4">
             Olá, meu nome é Johnny Henrique da Silva (Johnny Dev), atuo como
             desenvolvedor{' '}
-            <span className="font-semibold text-primary"> FullStack</span>, sou
+            <span className="font-semibold text-primary"> Frontend</span> e{' '}
+            <span className="font-semibold text-primary"> Backend</span>, sou
             apaixonado por{' '}
-            <span className="font-semibold text-primary">código</span>,
-            desenvolver é minha praia.
+            <span className="font-semibold text-primary">código</span>, amo
+            fazer as coisas funcionarem com a simplicidade do{' '}
+            <span className="font-semibold text-primary">JavaScript</span> e do{' '}
+            <span className="font-semibold text-primary">PHP</span>. Desenvolver
+            é minha praia.
           </p>
 
           <Image
