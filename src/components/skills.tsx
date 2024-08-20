@@ -1,3 +1,5 @@
+import { useTranslations } from 'next-intl'
+
 import {
   Card,
   CardContent,
@@ -24,18 +26,18 @@ export function Skills() {
     { name: 'Git' },
   ]
 
+  const t = useTranslations('skills')
+
   return (
     <section>
       <div className="container">
         <Card>
           <CardHeader>
             <CardTitle className="max-sm:text-2xl [&>span]:text-primary">
-              <span>&lt;</span>Habilidades <span>/&gt;</span>
+              <span>&lt;</span>
+              {t('title')} <span>/&gt;</span>
             </CardTitle>
-            <CardDescription>
-              Frameworks, linguagens e ferramentas que domino e utilizo no dia a
-              dia.
-            </CardDescription>
+            <CardDescription>{t('description')}</CardDescription>
           </CardHeader>
           <CardContent>
             <ul className="grid list-disc grid-cols-2 gap-3 px-4 max-sm:grid-cols-1">

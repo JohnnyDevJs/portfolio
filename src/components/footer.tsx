@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import { FaHeart } from 'react-icons/fa'
 
 import {
@@ -7,6 +8,8 @@ import {
 } from '@/components/ui/tooltip'
 
 export function Footer() {
+  const t = useTranslations('footer')
+
   return (
     <footer className="flex flex-col items-center bg-muted py-8 text-center">
       <div className="container space-y-2 max-sm:space-y-4">
@@ -15,8 +18,8 @@ export function Footer() {
           <code className="font-bold text-primary">&lt;JS/&gt;</code>
         </p>
         <p className="flex flex-wrap items-center justify-center gap-2 text-sm leading-3">
-          Feito com <FaHeart className="text-primary" /> por Johnny Silva,
-          utilizando{' '}
+          {t('made')} <FaHeart className="text-primary" />{' '}
+          {`${t('author')}, ${t('stacks')}`}
           <Tooltip>
             <TooltipTrigger>
               <a
@@ -29,7 +32,7 @@ export function Footer() {
             </TooltipTrigger>
             <TooltipContent>Ir para Next.js</TooltipContent>
           </Tooltip>{' '}
-          e{' '}
+          {t('and')}
           <Tooltip>
             <TooltipTrigger>
               <a

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import {
   FaCodepen,
   FaDiscord,
@@ -11,10 +12,16 @@ import {
 import { FiMail } from 'react-icons/fi'
 
 import avatar from '@/assets/avatar.png'
+import { CopyToClipboard } from '@/components/copy-to-clipboard'
 import { ThemeToggle } from '@/components/theme-toggle'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
 
-import { CopyToClipboard } from './copy-to-clipboard'
-import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip'
+import { ChangeTextStyle } from './change-text-color'
+import LanguageToggle from './language-toggle'
 
 export function Header() {
   const socials = [
@@ -50,9 +57,11 @@ export function Header() {
     },
   ]
 
+  const t = useTranslations('header')
+
   return (
     <header className="my-10">
-      <div className="container flex items-center justify-between">
+      <div className="container flex items-start justify-between">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-semibold max-sm:text-2xl">
             Johnny Silva{' '}
@@ -60,25 +69,20 @@ export function Header() {
           </h1>
           <span className="text-lg font-medium text-primary">Johnny Dev</span>
         </div>
-        <ThemeToggle />
+        <div className="flex items-center gap-2">
+          <LanguageToggle />
+          <ThemeToggle />
+        </div>
       </div>
       <div className="container flex items-center justify-between">
         <div>
-          <p className="mt-4">
-            Olá, meu nome é Johnny Henrique da Silva (Johnny Dev), atuo como
-            desenvolvedor{' '}
-            <span className="font-semibold text-primary"> Frontend</span> e{' '}
-            <span className="font-semibold text-primary"> Backend</span>, sou
-            apaixonado por{' '}
-            <span className="font-semibold text-primary">código</span>, amo
-            fazer as coisas funcionarem com a simplicidade do{' '}
-            <span className="font-semibold text-primary">JavaScript</span> e do{' '}
-            <span className="font-semibold text-primary">PHP</span>. Desenvolver
-            é minha praia.
-          </p>
+          <ChangeTextStyle
+            text={t('intro')}
+            keywords={['Frontend', 'Backend', 'código', 'JavaScript', 'PHP']}
+          />
 
           <Image
-            className="mx-auto mt-4 h-full w-full rounded-full sm:hidden"
+            className="mx-auto mt-4 h-full rounded-full max-sm:!w-52 sm:hidden"
             src={avatar}
             width={250}
             height={250}
@@ -94,7 +98,7 @@ export function Header() {
                       <social.icon className="h-8 w-8 hover:text-primary" />
                     </a>
                   </TooltipTrigger>
-                  <TooltipContent>Ir para {social.name}</TooltipContent>
+                  <TooltipContent>{`${t('tooltip.socials')} ${social.name}`}</TooltipContent>
                 </Tooltip>
               </li>
             ))}
@@ -102,8 +106,8 @@ export function Header() {
             <li className="flex items-center">
               <CopyToClipboard
                 link="#johnnydevjs"
-                initialMessage="Clique para copiar o usuário do Discord"
-                message="Usuário copiado para sua área de transferência"
+                initialMessage={t('tooltip.discord.initialMessage')}
+                message={t('tooltip.discord.message')}
               >
                 <FaDiscord className="h-8 w-8 hover:text-primary" />
               </CopyToClipboard>
@@ -112,8 +116,8 @@ export function Header() {
             <li className="flex items-center">
               <CopyToClipboard
                 link="johnnydev.js@gmail.com"
-                initialMessage="Clique para copiar o e-mail"
-                message="E-mail copiado para sua área de transferência"
+                initialMessage={t('tooltip.email.initialMessage')}
+                message={t('tooltip.email.message')}
               >
                 <FiMail className="h-8 w-8 hover:text-primary" />
               </CopyToClipboard>
