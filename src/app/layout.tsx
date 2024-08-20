@@ -8,7 +8,7 @@ import Providers from '@/app/providers'
 const firaCode = Fira_Code({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Johnny Silva - Página inicial',
+  title: 'Johnny Silva - Frontend & Backend Developer',
 }
 
 export default function RootLayout({
