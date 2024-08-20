@@ -1,0 +1,53 @@
+{
+  "header": {
+    "intro": "Olá, meu nome é Johnny Henrique da Silva (Johnny Dev), atuo como desenvolvedor Frontend e Backend, sou apaixonado por código, amo fazer as coisas funcionarem com a simplicidade do JavaScript e do PHP, desenvolver é minha praia.",
+    "tooltip": {
+      "socials": "Ir para",
+      "discord": {
+        "initialMessage": "Clique para copiar o usuário do Discord",
+        "message": "Usuário copiado para sua área de transferência"
+      },
+      "email": {
+        "initialMessage": "Clique para copiar o e-mail",
+        "message": "E-mail copiado para sua área de transferência"
+      }
+    }
+  },
+  "skills": {
+    "title": "Habilidades",
+    "description": "Frameworks, linguagens e ferramentas que domino e utilizo no dia a dia"
+  },
+  "experiences": {
+    "title": "Experiências",
+    "one": {
+      "position": "Desenvolvedor Sênior React e WordPress",
+      "company": "Prodesp - Governo do Estado de São Paulo",
+      "description": "Atuo no desenvolvimento e manutenção de Portais do Governo do Estado de São Paulo, alguns Portais desenvolvidos utilizando WordPress e outros utilizando Next.js.",
+      "todos": [
+        "Next.js",
+        "WordPress",
+        "Desenvolvimento sob demanda",
+        "Arquitetura Limpa"
+      ],
+      "date": "Março de 2021 - atual"
+    },
+    "two": {
+      "position": "Desenvolvedor Sênior Vue.js e WordPress",
+      "company": "Usabit Global - Ânima Educação",
+      "description": "Atuei no desenvolvimento e manutenção de Portais na área da educação.",
+      "todos": [
+        "Next.js",
+        "WordPress",
+        "Desenvolvimento sob demanda",
+        "Arquitetura Limpa"
+      ],
+      "date": "Março de 2021 - atual"
+    }
+  },
+  "footer": {
+    "made": "Feito com",
+    "author": "por Johnny silva",
+    "stacks": "utilizando",
+    "and": "e"
+  }
+}

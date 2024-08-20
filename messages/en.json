@@ -1,0 +1,54 @@
+{
+  "header": {
+    "intro": "Hello, my name is Johnny Henrique da Silva (Johnny Dev). I work as a Frontend and Backend developer, and I'm passionate about coding. I love making things work with the simplicity of JavaScript and PHP. Developing is my thing.",
+    "tooltip": {
+      "socials": "Go to",
+      "discord": {
+        "initialMessage": "Click to copy the Discord username",
+        "message": "Username copied to your clipboard"
+      },
+      "email": {
+        "initialMessage": "Click to copy the email",
+        "message": "Email copied to your clipboard"
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "description": "Frameworks, languages, and tools I master and use daily"
+  },
+  "experiences": {
+    "title": "Experiences",
+    "one": {
+      "position": "Senior WordPress and React Developer",
+      "company": "Prodesp - Government of the State of São Paulo",
+      "description": "I work in the development and maintenance of Portals for the Government of the State of São Paulo, with some portals developed using WordPress and others using Next.js.",
+      "todos": [
+        "Next.js",
+        "WordPress",
+        "Custom Development",
+        "Clean Architecture"
+      ],
+      "date": "March 2021 - present"
+    },
+    "two": {
+      "position": "Senior Vue.js and WordPress Developer",
+      "company": "Usabit Global - Anima Education",
+      "description": "I worked on the development and maintenance of educational portals.",
+      "todos": [
+        "Vue.js",
+        "Nuxt",
+        "WordPress",
+        "Custom Development",
+        "Clean Architecture"
+      ],
+      "date": "March 2021 - May 2024"
+    }
+  },
+  "footer": {
+    "made": "Made with",
+    "author": "by Johnny silva",
+    "stacks": "using",
+    "and": "and"
+  }
+}
