@@ -11,7 +11,12 @@
         "initialMessage": "Clique para copiar o e-mail",
         "message": "E-mail copiado para sua área de transferência"
       }
-    }
+    },
+    "themeToggle": [
+      "Claro",
+      "Escuro",
+      "Sistema"
+    ]
   },
   "skills": {
     "title": "Habilidades",
@@ -29,10 +34,10 @@
         "Desenvolvimento sob demanda",
         "Arquitetura Limpa"
       ],
-      "date": "Março de 2021 - atual"
+      "date": "Março de 2022 - atual"
     },
     "two": {
-      "position": "Desenvolvedor Sênior Vue.js e WordPress",
+      "position": "Desenvolvedor Sênior Vue.js e WordPress (PJ)",
       "company": "Usabit Global - Ânima Educação",
       "description": "Atuei no desenvolvimento e manutenção de Portais na área da educação.",
       "todos": [
@@ -41,13 +46,58 @@
         "Desenvolvimento sob demanda",
         "Arquitetura Limpa"
       ],
-      "date": "Março de 2021 - Maio de 2024"
+      "date": "Março de 2022 - Maio de 2024"
+    },
+    "three": {
+      "position": "Desenvolvedor Sênior WordPress",
+      "company": "Faculdade São Leopoldo Mandic",
+      "description": "Atuei no desenvolvimento e manutenção do Portal  de cursos da Faculdade.",
+      "todos": [
+        "WordPress",
+        "Desenvolvimento sob demanda",
+        "Arquitetura Limpa"
+      ],
+      "date": "Maio de 2021 - Fevereiro de 2022"
     }
+  },
+  "projects": {
+    "title": "Projetos",
+    "tooltip": "Ir para",
+    "select": {
+      "options": [
+        "Todos",
+        "Empresa",
+        "Freelance"
+      ]
+    },
+    "iro": {
+      "name": "Iro Campinas",
+      "description": "Design e layout desenvolvido por mim, implementado utilizando tema do WordPress criado do absoluto zero."
+    },
+    "locksmith": {
+      "name": "Serralheria Jovem Profeta",
+      "description": "Design, layout e logotipo desenvolvido por mim, usando tema modelo parallax one page desenvolvido do absoluto zero."
+    },
+    "digitalHealth": {
+      "name": "Portal Saúde Digital",
+      "description": "Portal em desenvolvimento com Next.js app router, utilizando APIs na construção do backend e frontend."
+    },
+    "button": "Ver projeto"
   },
   "footer": {
     "made": "Feito com",
-    "author": "por Johnny silva",
+    "author": "por Johnny Silva",
     "stacks": "utilizando",
     "and": "e"
+  },
+  "whatsapp": {
+    "message": "Chamar no WhatsApp"
+  },
+  "homePage": {
+    "message": "Desenvolvedor frontend e backend"
+  },
+  "notFound": {
+    "message": "Página não encontrada",
+    "button": "Voltar para página inicial"
   }
 }
