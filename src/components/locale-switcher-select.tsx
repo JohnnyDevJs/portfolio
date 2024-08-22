@@ -1,7 +1,6 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { useLocale } from 'next-intl'
 import { useTransition } from 'react'
 import { FiGlobe } from 'react-icons/fi'
 
@@ -12,20 +11,31 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import { Locale } from '@/config'
+import { setUserLocale } from '@/services/locale'
 
-export default function LanguageToggle() {
+type LocaleSwitcherSelectProps = {
+  defaultValue: string
+  items: Array<{ value: string; label: string }>
+}
+
+export function LocaleSwitcherSelect({
+  defaultValue,
+  items,
+}: LocaleSwitcherSelectProps) {
   const [isPending, startTransition] = useTransition()
   const router = useRouter()
-  const localActive = useLocale()
 
   const onSelectChange = (value: string) => {
+    const locale = value as Locale
     startTransition(() => {
+      setUserLocale(locale)
       router.replace(`/${value}`)
     })
   }
   return (
     <Select
-      defaultValue={localActive}
+      defaultValue={defaultValue}
       onValueChange={onSelectChange}
       disabled={isPending}
     >
@@ -34,8 +44,11 @@ export default function LanguageToggle() {
         <SelectValue placeholder="" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="pt">PT</SelectItem>
-        <SelectItem value="en">EN</SelectItem>
+        {items.map((item, index) => (
+          <SelectItem key={index} value={item.value}>
+            {item.label}
+          </SelectItem>
+        ))}
       </SelectContent>
     </Select>
   )

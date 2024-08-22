@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { useTheme } from 'next-themes'
 import * as React from 'react'
 import { FiMoon, FiSun } from 'react-icons/fi'
@@ -15,6 +16,8 @@ import {
 export function ThemeToggle() {
   const { setTheme } = useTheme()
 
+  const t = useTranslations('header')
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -26,13 +29,13 @@ export function ThemeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme('light')}>
-          Light
+          {t('themeToggle.0')}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme('dark')}>
-          Dark
+          {t('themeToggle.1')}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme('system')}>
-          System
+          {t('themeToggle.2')}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

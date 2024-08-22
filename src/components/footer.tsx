@@ -11,7 +11,7 @@ export function Footer() {
   const t = useTranslations('footer')
 
   return (
-    <footer className="flex flex-col items-center bg-muted py-8 text-center">
+    <footer className="mt-10 flex flex-col items-center bg-muted py-8 text-center">
       <div className="container space-y-2 max-sm:space-y-4">
         <p className="text-center text-sm">
           © Copyright 2024 - Johnny Silva (Johnny Dev){' '}

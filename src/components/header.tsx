@@ -13,6 +13,7 @@ import { FiMail } from 'react-icons/fi'
 
 import avatar from '@/assets/avatar.png'
 import { CopyToClipboard } from '@/components/copy-to-clipboard'
+import { LocaleSwitcher } from '@/components/locale-switcher'
 import { ThemeToggle } from '@/components/theme-toggle'
 import {
   Tooltip,
@@ -21,7 +22,6 @@ import {
 } from '@/components/ui/tooltip'
 
 import { ChangeTextStyle } from './change-text-color'
-import LanguageToggle from './language-toggle'
 
 export function Header() {
   const socials = [
@@ -70,7 +70,7 @@ export function Header() {
           <span className="text-lg font-medium text-primary">Johnny Dev</span>
         </div>
         <div className="flex items-center gap-2">
-          <LanguageToggle />
+          <LocaleSwitcher />
           <ThemeToggle />
         </div>
       </div>

@@ -24,6 +24,15 @@ export function Experiences() {
       ),
       date: t('two.date'),
     },
+    {
+      position: t('three.position'),
+      company: t('three.company'),
+      description: t('three.description'),
+      todos: Array.from({ length: t.raw('three.todos').length }, (_, i) =>
+        t(`three.todos.${i}`),
+      ),
+      date: t('three.date'),
+    },
   ]
 
   return (
